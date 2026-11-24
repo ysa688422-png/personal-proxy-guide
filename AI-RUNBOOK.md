@@ -1,4 +1,4 @@
-# 给执行 AI 的手册 · 在 AWS Lightsail 部署和验收双线路
+# 个人机场 AI 执行手册
 
 适用任务是为所有者建立东京、新加坡两个个人节点，让使用者在一个客户端里选择线路，能查到实际出口，并在一条线路不可用时使用另一条。本文针对两台新建的 Ubuntu Lightsail 主机。执行结果必须由目标账号、目标网络和目标设备上的读数支持。
 
@@ -7,8 +7,8 @@
 如果用户只发来这个 Markdown，可以用下面的命令下载公开模板。已经有仓库时，直接读取本地副本并记录当前提交。
 
 ```sh
-git clone https://github.com/ysa688422-png/aws-lightsail-vpn-guide.git
-cd aws-lightsail-vpn-guide
+git clone https://github.com/ysa688422-png/personal-proxy-guide.git
+cd personal-proxy-guide
 git rev-parse HEAD
 ```
 
