@@ -1,0 +1,37 @@
+# 一次导入两条线路。先填写每个地区的公网 IPv4、独立口令和证书 SHA-256。
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+
+proxies:
+  - name: 东京
+    type: hysteria2
+    server: "JP_PUBLIC_IPV4"
+    port: 443
+    password: "JP_PASSWORD"
+    sni: jp.vpn.invalid
+    fingerprint: "JP_PIN_SHA256"
+    skip-cert-verify: false
+  - name: 新加坡
+    type: hysteria2
+    server: "SG_PUBLIC_IPV4"
+    port: 8443
+    password: "SG_PASSWORD"
+    sni: sg.vpn.invalid
+    fingerprint: "SG_PIN_SHA256"
+    skip-cert-verify: false
+
+proxy-groups:
+  - name: 线路选择
+    type: select
+    proxies: [自动切换, 东京, 新加坡]
+  - name: 自动切换
+    type: fallback
+    proxies: [东京, 新加坡]
+    url: https://cp.cloudflare.com/generate_204
+    interval: 120
+    expected-status: 204
+
+rules:
+  - MATCH,线路选择

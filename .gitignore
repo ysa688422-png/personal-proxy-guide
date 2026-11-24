@@ -1,0 +1,17 @@
+# Keep operator-specific copies outside the published examples.
+private/
+local/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.mobileconfig
+*.conf
+*.sqlite*
+*.db
+*.zip
+*.log
+.DS_Store
+__pycache__/
