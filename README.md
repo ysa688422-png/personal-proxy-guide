@@ -6,7 +6,10 @@
 
 | 使用方式 | 文档 |
 | --- | --- |
-| 我自己从开户开始搭建 | [中文实操指南](docs/实操指南.md) |
+| 先选云厂商或规划到期后怎么衔接（AWS / Azure / GCP） | [云厂商方案对比与衔接策略](docs/云厂商方案对比.md) |
+| 我自己从开户开始搭建（AWS Lightsail，主力推荐） | [中文实操指南](docs/实操指南.md) |
+| 我想用 Microsoft Azure 搭建（$200 试用 / 12 个月免费机） | [Azure 实操指南](docs/Azure实操指南.md) |
+| 我想用 Google Cloud 搭建（$300 试用 / 防流量刺客） | [GCP 实操指南](docs/GCP实操指南.md) |
 | 我把任务交给 AI 执行 | [AI 执行手册](AI-RUNBOOK.md) |
 | 我想先从一台机器、一个标准 VPN 开始 | [新加坡 WireGuard 单节点教程](docs/WireGuard.md) |
 | 我已经准备好服务器，需要配置文件 | [Hysteria 2 服务端模板](examples/hysteria-server.yaml) · [FlClash 双节点模板](examples/flclash.yaml) |
